@@ -16,8 +16,10 @@ class Cell:
 
 class Sawada:
     def __init__(self, combination):
-        self.head = 0
         self.necklaces = []
+        if not combination:
+            return
+        self.head = 0
         self.key = {}
         combo_set = list(set(combination))
         for i in range(len(combo_set)):
