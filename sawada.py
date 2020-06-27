@@ -19,14 +19,13 @@ class Sawada:
         self.head = 0
         self.necklaces = []
         self.key = {}
-        self.combination = combination
         combo_set = list(set(combination))
         for i in range(len(combo_set)):
             self.key[i] = combo_set[i]
         lst_count = count_elements(combination)
         self.num_map = [i for i in range(len(set(combination))+1)]
         self.K = len(set(combination))
-        self.N = len(self.combination)
+        self.N = len(combination)
         self.avail = [Cell(0, 0) for i in range(self.K+2)]
         self.a = [0] * (self.N + 1)
         self.run = [0] * (self.N + 1)
